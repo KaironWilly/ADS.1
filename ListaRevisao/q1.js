@@ -6,12 +6,14 @@ function main() {
 
     positivo_ou_negativo(numero)
 
-    function positivo_ou_negativo(a) {
-        if (a > 0) {
-            console.log("O número é positivo.")
-        } else {
-            console.log("O número é negativo.")
-        }
-    }
 }
 main()
+
+
+function positivo_ou_negativo(a) {
+    if (a > 0) {
+        console.log("O número é positivo.")
+    } else {
+        console.log("O número é negativo.")
+    }
+}

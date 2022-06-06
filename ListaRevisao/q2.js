@@ -6,17 +6,18 @@ function main() {
 
     console.log(`Sexo: ${verificar_sexo(sexo)}`)
 
-    function verificar_sexo(a) {
-        let sexo
-        if (a == "F") {
-            sexo = "Feminino"
-        } else if (a == "M") {
-            sexo = "Masculino"
-        } else {
-            sexo = "Indefinido."
-        }
-
-        return sexo
-    }
 }
 main()
+
+function verificar_sexo(a) {
+    let sexo
+    if (a == "F") {
+        sexo = "Feminino"
+    } else if (a == "M") {
+        sexo = "Masculino"
+    } else {
+        sexo = "Indefinido."
+    }
+
+    return sexo
+}

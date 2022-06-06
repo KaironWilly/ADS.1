@@ -6,8 +6,10 @@ function main() {
     const mais_barato = valores
     console.log(`O produto mais barato é o de R$ ${mais_barato}`)
 
-    function ordem_crescente(a, b) {
-        return a - b
-    }
+
 }
 main()
+
+function ordem_crescente(a, b) {
+    return a - b
+}
