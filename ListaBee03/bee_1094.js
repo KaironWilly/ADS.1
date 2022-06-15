@@ -22,15 +22,15 @@ function main() {
     const tipo = Tipo
 
     const [qtd_ratos, qtd_coelhos, qtd_sapos, qtd_Total] = contar_animais(quantidade, Tipo)
+    const [percentual_coelhos, percentual_ratos, percentual_sapos] = porcentagem_animais(qtd_Total, qtd_coelhos, qtd_ratos, qtd_sapos)
 
     console.log(`Total: ${qtd_Total} cobaias`)
     console.log(`Total de coelhos: ${qtd_coelhos}`)
     console.log(`Total de ratos: ${qtd_ratos}`)
     console.log(`Total de sapos: ${qtd_sapos}`)
-
-    // console.log(`Percentual de coelhos: ${percentual_coelhos.toFixed(2)} %`)
-    // console.log(`Percentual de ratos: ${percentual_ratos.toFixed(2)} %`)
-    // console.log(`Percentual de sapos: ${percentual_sapos.toFixed(2)} %`)
+    console.log(`Percentual de coelhos: ${percentual_coelhos.toFixed(2)} %`)
+    console.log(`Percentual de ratos: ${percentual_ratos.toFixed(2)} %`)
+    console.log(`Percentual de sapos: ${percentual_sapos.toFixed(2)} %`)
 
 
 }
@@ -52,4 +52,12 @@ function contar_animais(quantia, tipos) {
     }
     let qtd_total = qtd_coelhos + qtd_ratos + qtd_sapos
     return [qtd_ratos, qtd_coelhos, qtd_sapos, qtd_total]
+}
+
+function porcentagem_animais(qtd_total, qtd_coelhos, qtd_ratos, qtd_sapos) { // %qtd = x/100 * total  total/100 / qtd = x
+    let percentual_coelhos = qtd_total / 100 / qtd_coelhos,
+        percentual_ratos = qtd_total / 100 / qtd_ratos,
+        percentual_sapos = qtd_total / 100 / qtd_sapos
+
+    return [percentual_coelhos, percentual_ratos, percentual_sapos]
 }
