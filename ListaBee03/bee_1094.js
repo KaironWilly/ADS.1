@@ -51,13 +51,14 @@ function contar_animais(quantia, tipos) {
         }
     }
     let qtd_total = qtd_coelhos + qtd_ratos + qtd_sapos
+
     return [qtd_ratos, qtd_coelhos, qtd_sapos, qtd_total]
 }
 
-function porcentagem_animais(qtd_total, qtd_coelhos, qtd_ratos, qtd_sapos) { // %qtd = x/100 * total  total/100 / qtd = x
-    let percentual_coelhos = qtd_total / 100 / qtd_coelhos,
-        percentual_ratos = qtd_total / 100 / qtd_ratos,
-        percentual_sapos = qtd_total / 100 / qtd_sapos
+function porcentagem_animais(qtd_total, qtd_coelhos, qtd_ratos, qtd_sapos) { // %qtd = x/100 * total  
+    let percentual_coelhos = 100 * qtd_coelhos / qtd_total,
+        percentual_ratos = 100 * qtd_ratos / qtd_total,
+        percentual_sapos = 100 * qtd_sapos / qtd_total
 
     return [percentual_coelhos, percentual_ratos, percentual_sapos]
 }
