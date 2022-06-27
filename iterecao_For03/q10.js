@@ -5,9 +5,9 @@ function main(){
     const [LimiteSuperior, LimiteInferior] = input("Digite LimiteSuperior e LimiteInferior: ").split(" ").map(Number)
 
     for(let i = LimiteSuperior; i > LimiteInferior; i--){
-        if(eh_impar(i))[
+        if(eh_impar(i)){
             console.log(i)
-        ]
+        }
     }
 
 }
