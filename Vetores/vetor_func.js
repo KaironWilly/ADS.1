@@ -1,5 +1,5 @@
 import prompt from "prompt-sync"
-const input = prompt()
+export const input = prompt()
 
 export function novo_vetor(length) {
     return new Array(length)
@@ -71,22 +71,6 @@ export function intersecao_entre_dois_vetores(vetor_a, vetor_b) {
     return vetorD
 }
 
-export function remove_item_vetor(vetor, posicao) {
-
-    const vetor2 = novo_vetor(vetor.length - 1)
-    let j = 0
-
-    for (let i = 0; i < vetor.length; i++) {
-        if (i !== posicao) {
-            // transpor item da posicao indice para vetor2
-            vetor2[j] = vetor[i]
-            j++
-        }
-    }
-
-    return vetor2
-}
-
 export function adicionar_item_vetor(vetor, posicao, item) {
     const novoVetor = novo_vetor(vetor.length + 1)
     for (let i = 0, j = 0; i < novoVetor.length; i++) {
@@ -103,11 +87,4 @@ export function adicionar_item_vetor(vetor, posicao, item) {
 
 export function vetor_push(vetor, item) {
     return adicionar_item_vetor(vetor, vetor.length, item)
-}
-
-export function vetor_pop(vetor) {
-    const removido = vetor[vetor.length - 1]
-    const vetor2 = remove_item_vetor(vetor, vetor.length - 1)
-
-    return [vetor2, removido]
 }
